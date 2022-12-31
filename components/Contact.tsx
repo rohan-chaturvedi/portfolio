@@ -18,7 +18,7 @@ const Contact = () => {
         formState: { errors, isValid }
     } = useForm<FormData>();
 
-    console.log(isValid);
+    // console.log(isValid);
     const onSubmit: SubmitHandler<FormData> = (data) => {
         console.log(data);
         reset();
