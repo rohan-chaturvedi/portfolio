@@ -20,7 +20,7 @@ const Projects = ({ projects }: Prop) => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-x-8 gap-y-12">
                     {projects.map((project, idx) => {
-                        return <Card project={project} />;
+                        return <Card key={idx} project={project} />;
                     })}
                 </div>
             </div>

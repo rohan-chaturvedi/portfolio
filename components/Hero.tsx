@@ -39,11 +39,11 @@ const Hero = () => {
                         about building accessible web apps that users love.
                     </p>
 
-                    <a
+                    <Link
                         href="/#contact"
                         className="border-primary-green border-b-2 w-[100px] z-10 text-[16px] h-9 hover:text-primary-green duration-100 ease-in-out">
                         CONTACT ME
-                    </a>
+                    </Link>
                 </div>
                 <hr />
             </div>

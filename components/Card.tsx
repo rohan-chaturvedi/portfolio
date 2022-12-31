@@ -36,7 +36,7 @@ const Card = ({ project }: Prop) => {
                 <h3 className="text-heading-m">{project.title}</h3>
                 <div className="flex gap-x-4 mt-1 text-primary-lightgray">
                     {project?.skills.map((skill, idx) => {
-                        return <span>{skill}</span>;
+                        return <span key={idx}>{skill}</span>;
                     })}
                 </div>
             </div>
