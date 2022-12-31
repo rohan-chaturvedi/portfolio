@@ -30,6 +30,7 @@ const Card = ({ project }: Prop) => {
                     width={500}
                     height={400}
                     className="z-2"
+                    priority
                 />
             </div>
             <div>
