@@ -25,7 +25,7 @@ const Contact = () => {
     };
     return (
         <div id="contact" className="bg-primary-gray text-white py-12 px-4">
-            <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-y-8 justify-between gap-x-24">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-y-8 justify-between gap-x-24">
                 <div className="flex flex-col gap-y-4">
                     <h2 className="text-heading-xl font-bold">Contact</h2>
                     <p className="text-body-m font-regular text-primary-lightgray max-w-sm">

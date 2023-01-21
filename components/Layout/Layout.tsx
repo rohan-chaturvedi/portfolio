@@ -50,7 +50,7 @@ const BrandingCircle = ({ classname = "" }: BrandingProp) => {
     );
 };
 
-const Layout = ({ children, title = "Henry Oke's Portfolio" }: Props) => {
+const Layout = ({ children, title = "Rohan's Portfolio" }: Props) => {
     return (
         <div className="scroll-smooth overflow-hidden">
             <Head>

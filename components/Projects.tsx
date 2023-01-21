@@ -9,7 +9,7 @@ type Prop = {
 const Projects = ({ projects }: Prop) => {
     return (
         <div className="py-12 bg-secondary-dark text-white px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <div className="flex flex-row justify-between items-center">
                     <h2 className="text-heading-l md:text-heading-xl font-bold">
                         Projects
@@ -18,7 +18,7 @@ const Projects = ({ projects }: Prop) => {
                         CONTACT ME
                     </button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-x-8 gap-y-12">
+                <div className="grid grid-cols-1 mt-20 gap-x-8 gap-y-12">
                     {projects.map((project, idx) => {
                         return <Card key={idx} project={project} />;
                     })}

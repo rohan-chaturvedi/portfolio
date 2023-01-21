@@ -1,17 +1,17 @@
 export const projects = [
     {
-        title: "Resumefy",
-        skills: ["Nextjs", "AWS"],
-        src: "/bitmap.png",
-        url: "/#",
-        github: "/#"
+        title: "Keyspace",
+        skills: ["React", "Typescript", "Python", "Django"],
+        src: "/keyspace.png",
+        url: "https://keyspace.cloud",
+        github: "https://github.com/Keyspace-cloud"
     },
     {
-        title: "Resumefy",
-        skills: ["Nextjs", "AWS"],
+        title: "DeepSource UI",
+        skills: ["Vue", "Nuxt", "Tailwind"],
         src: "/bitmap.png",
-        url: "/#",
-        github: "/#"
+        url: "https://deepsource.io",
+        github: "https://github.com/deepsourcelabs"
     },
     {
         title: "Resumefy",

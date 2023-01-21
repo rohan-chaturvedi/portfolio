@@ -5,11 +5,11 @@ import {BsGithub, BsLinkedin, BsTwitter} from 'react-icons/bs'
 const Footer = () => {
   return (
     <div className='bg-primary-gray text-white'>
-      <footer className='max-w-5xl mx-auto'>
+      <footer className='max-w-7xl mx-auto'>
         <hr />
         <div className='flex flex-row justify-between px-3 py-9 items-center relative'>
           <div>
-              <h3 className='text-heading-logo'>HenryOke</h3>
+              <h3 className='text-heading-logo'>Rohan</h3>
           </div>
           <nav className='flex flex-row gap-x-8 mr-3 text-white items-center z-10'>
               <Link href='/#'>
