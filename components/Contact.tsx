@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Button from "@layout/Button";
 import ErrorMessage from "./Layout/Error";
@@ -9,6 +9,11 @@ type FormData = {
     message: string;
 };
 
+type ResponseState = {
+    type: 'success'| 'fail';
+    message: string;
+}
+
 const Contact = () => {
     const {
         register,
@@ -17,10 +22,45 @@ const Contact = () => {
         setValue,
         formState: { errors, isValid }
     } = useForm<FormData>();
+    const [response, setResponse] = useState<ResponseState | undefined>(undefined)
 
-    // console.log(isValid);
     const onSubmit: SubmitHandler<FormData> = (data) => {
-        console.log(data);
+        let status = document.getElementById("my-form-status");
+      fetch('https://formspree.io/f/xqkoajgp', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+            setResponse({
+                type: 'success',
+                message: 'Thanks for your submission!'
+            })
+          reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                setResponse({
+                    type: 'fail',
+                    message: data["errors"].map((error: { [x: string]: any; }) => error["message"]).join(", ")
+                })
+              
+            } else {
+                setResponse({
+                    type: 'fail',
+                    message: 'Oops! There was a problem submitting your form'
+                })
+            }
+          })
+        }
+      }).catch(error => {
+        setResponse({
+            type: 'fail',
+            message: 'Oops! There was a problem submitting your form'
+        })
+      });
         reset();
     };
     return (
@@ -34,7 +74,7 @@ const Contact = () => {
                         as soon as possible.
                     </p>
                 </div>
-                <div className="w-full lg:w-[50%]">
+                {response === undefined && <div className="w-full lg:w-[50%]">
                     <form
                         className="flex flex-col justify-items-end gap-y-4 items-end"
                         onSubmit={handleSubmit(onSubmit)}>
@@ -104,7 +144,8 @@ const Contact = () => {
                             text="SEND MESSAGE"
                         />
                     </form>
-                </div>
+                </div>}
+                {response !== undefined && <div>{response.message}</div>}
             </div>
         </div>
     );

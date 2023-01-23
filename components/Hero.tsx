@@ -10,16 +10,16 @@ const Hero = () => {
                     <Image
                         className="lg:absolute md:flex top-0 sm:right-4 lg:right-[2rem] xl:right-[12rem] 2xl:right-[25rem] -z-1 hidden rounded-sm"
                         alt="hero-image"
-                        src="/rohan.jpg"
-                        width={400}
+                        src="/rohan.webp"
+                        width={317.5}
                         height={500}
                         priority
                     />
                     <Image
                         className="absolute md:hidden top-20 sm:right-4 lg:right-[2rem] xl:right-[12rem] 2xl:right-[25rem] -z-1"
                         alt="hero-image"
-                        src="/rohan.jpg"
-                        width={200}
+                        src="/rohan.webp"
+                        width={317.5}
                         height={500}
                         priority
                     />
@@ -34,13 +34,13 @@ const Hero = () => {
                         </span>
                     </h1>
                     {/* <BrandingCircle/> */}
-                    <p className="max-w-sm mb-12 text-body-m font-medium">
+                    <p className="max-w-sm mb-12 text-body-m font-medium opacity-70">
                        I'm a full-stack developer passionate
                         about building privacy focused apps and experimenting with emerging tech.
                     </p>
 
                     <Link
-                        href="mailto:rohan.chaturvedi@protonmail.com"
+                        href="#contact"
                         className="border-primary-green border-b-2 w-[100px] z-10 text-[16px] h-9 hover:text-primary-green duration-100 ease-in-out">
                         CONTACT ME
                     </Link>

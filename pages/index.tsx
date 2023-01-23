@@ -7,8 +7,6 @@ import Experience from "@components/Experience";
 import Projects from "@components/Projects";
 import Contact from "@components/Contact";
 
-import { projects } from "@lib/data";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -18,7 +16,7 @@ export default function Home() {
                 <Layout>
                     <Hero />
                     <Experience />
-                    <Projects projects={projects} />
+                    <Projects />
                     <Contact />
                 </Layout>
             </main>
