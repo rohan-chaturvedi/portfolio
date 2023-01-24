@@ -46,7 +46,7 @@ const Experience = () => {
         </h2>
         {data.map((item) => (
           <div key={item.title} className="text-center md:text-left">
-            <h3 className="text-heading-l">{item.title}</h3>
+            <h3 className="text-heading-m md:text-heading-l">{item.title}</h3>
             <p className="text-body-m font-regular text-primary-lightgray">
               {item.subtitle}
             </p>

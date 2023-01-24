@@ -37,11 +37,11 @@ const Card = ({ project }: Prop) => {
           className="z-2"
           priority
         /> */}
-        <div
-          className="h-[400px] w-[500px] overflow-hidden"
-          
-        >
-            <div className="absolute inset-0 group-hover:scale-105 bg-cover duration-300 ease-in-out" style={{ backgroundImage: `url(${project.src})` }}></div>
+        <div className="h-[400px] w-[500px]filter overflow-hidden group-hover:blur-sm group-hover:shadow-lg duration-300 ease-in-out">
+          <div
+            className="absolute inset-0 group-hover:scale-105  bg-cover duration-300 ease-in-out rounded-md"
+            style={{ backgroundImage: `url(${project.src})` }}
+          ></div>
         </div>
       </div>
       <div>
