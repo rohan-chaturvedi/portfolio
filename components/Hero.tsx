@@ -1,9 +1,9 @@
-import { createRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
-  const imageRef = createRef<HTMLImageElement>();
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     let observer = new IntersectionObserver((elements) => {
